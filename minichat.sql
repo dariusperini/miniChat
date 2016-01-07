@@ -20,27 +20,6 @@ SET time_zone = "+00:00";
 -- Base de données :  `minichat`
 --
 
--- --------------------------------------------------------
-
---
--- Structure de la table `connected`
---
-
-CREATE TABLE IF NOT EXISTS `connected` (
-  `user_id` int(11) NOT NULL,
-  `login_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `logout_time` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Contenu de la table `connected`
---
-
-INSERT INTO `connected` (`user_id`, `login_time`, `logout_time`) VALUES
-(3, '2015-12-21 13:37:56', NULL),
-(2, '2015-12-21 15:14:36', NULL),
-(1, '2015-12-22 14:30:24', NULL),
-(3, '2015-12-22 17:27:19', NULL);
 
 -- --------------------------------------------------------
 
@@ -84,9 +63,6 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 INSERT INTO `user` (`id`, `email`, `pass`, `lastname`, `firstname`, `last_log`, `connected`) VALUES
 (1, 'lau@test.fr', 'test', 'Abadie', 'laurent', '2015-12-22 14:30:24', 0),
-(2, 'tro@iad.fr', 'test', 'Roger', 'Thomas', '2015-12-21 15:14:36', 0),
-(3, 'fco@iad.fr', 'test', 'Couty', 'Florent', '2015-12-22 17:27:19', 0),
-(4, 'root', 'yellov', '', 'ADMIN', '2015-12-19 16:15:35', 0);
 
 --
 -- Index pour les tables exportées
