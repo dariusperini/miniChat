@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /minichat/
+RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule  [L,QSA]
+RewriteRule (.*) index.php?path=$1 [L,QSA]
+</IfModule>

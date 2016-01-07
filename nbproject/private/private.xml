@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Donnees/WampStack/apache2/htdocs/minichat/views/chat.html</file>
+            <file>file:/C:/Donnees/WampStack/apache2/htdocs/minichat/controlers/chat.php</file>
+            <file>file:/C:/Donnees/WampStack/apache2/htdocs/minichat/views/scripts/ajax_sendmessage.php</file>
+            <file>file:/C:/Donnees/WampStack/apache2/htdocs/minichat/views/scripts/ajax_getmessages.php</file>
+            <file>file:/C:/Donnees/WampStack/apache2/htdocs/minichat/views/scripts/ajax_chat.js</file>
+            <file>file:/C:/Donnees/WampStack/apache2/htdocs/minichat/model/classes/Chat.php</file>
+        </group>
+    </open-files>
+</project-private>

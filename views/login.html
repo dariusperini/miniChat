@@ -1,0 +1,15 @@
+<?php include 'header.inc'; ?>
+
+<h1>Vous devez vous identifier pour accéder au chat</h1>
+    
+<!-- Messages d'erreurs evebtuels  -->
+     <?php if (!empty($tabErrors)) {
+           echo '<br><font color="#FF0000">'.implode('<br>',$tabErrors).'</font>';
+      } ?>
+<form name="login" action="" method="POST">
+    Login (email) : <input type="text" name="email">
+    <br>Mot de passe: <input type="password" name="pass">
+    <br><input type="submit" value="Connexion">
+</form>
+
+<?php include 'footer.inc'; ?>

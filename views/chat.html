@@ -1,0 +1,49 @@
+<?php include 'header.inc'; ?>
+
+        <div id="chatForm">
+        <form method="POST" name="chat"> 
+            <input type="hidden" id="userId"  value="<?php echo $_SESSION['userId']?>">
+            <input type="hidden" id="pseudo" value="<?php echo $user->getFirstname()?>">
+            <script>
+                var lastMessageId = <?php echo $lastMessageId ?>
+            </script>
+            <a href="logout.php">[Deconnexion]</a><br>
+                <table border="1" width="100%">
+                    <tr>
+                        <td height="400" width="80%" valign="top" align="left">
+                            <div class="afficher" id="chatContent" cols="50">
+                          <!-- FENETRE PRINCIPAPLE DU CHAT -->  
+                               <?php 
+                               if (!empty($tabMessages)) {
+                                for ($numMessage=0; $numMessage < count($tabMessages); $numMessage++) { ?>
+                               <br><?php echo $tabMessages[$numMessage] ?>
+                               <?php }} ?>
+
+                          <!-- Message d'erreur effiché dans la fenêtre de chat mais pas mis en base -->
+                               <?php if (!empty($tabErrors)) {
+                                     echo '<br><font color="#FF0000">'.implode('<br>',$tabErrors).'</font>';
+                                } ?>
+                            </div>
+                        </td>
+                        <td width="10%" valign="top">
+                          <!-- LISTE DES GENS CONNECTES -->  
+                             <?php 
+                                if (!empty($tabConnectedUsers)) {
+                                 for ($i=0; $i < count($tabConnectedUsers); $i++) { ?>
+                               <br><?php echo $tabConnectedUsers[$i] ?>
+                             <?php }} ?>
+
+                          
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                                Tapez votre message : <input type="text" id="messageId" name="message" size="100"><input type="button" id="submitButton" value="Envoyer">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+<?php include 'footer.inc'; ?>
